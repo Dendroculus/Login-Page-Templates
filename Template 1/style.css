@@ -168,7 +168,6 @@ body {
     color: black;
 }
 
-/* Tablet Devices (Portrait) - 768px and below */
 @media screen and (max-width: 768px) {
     .loginpage {
         padding: 2.5rem 2rem;
@@ -188,7 +187,6 @@ body {
     }
 }
 
-/* Mobile Devices (Landscape) - 576px and below */
 @media screen and (max-width: 576px) {
     body {
         padding: 0.5rem;
@@ -236,7 +234,6 @@ body {
     }
 }
 
-/* Small Mobile Devices - 400px and below */
 @media screen and (max-width: 400px) {
     .loginpage {
         padding: 1.75rem 1.25rem;
@@ -275,7 +272,6 @@ body {
     }
 }
 
-/* Large Desktops - 1200px and above */
 @media screen and (min-width: 1200px) {
     .loginpage {
         padding: 3.5rem 3rem;
@@ -297,7 +293,6 @@ body {
     }
 }
 
-/* Extra Small Devices (Portrait) - 320px and below */
 @media screen and (max-width: 320px) {
     .loginpage {
         padding: 1.5rem 1rem;
