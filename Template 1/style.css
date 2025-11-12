@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --brandcolor-1: rgb(62, 62, 62);
+    --brand-bg: rgba(255, 255, 255, 0.05);
+    --brand-border: rgba(255, 255, 255, 0.15);
+    --brand-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    --brand-focus-border: rgba(255, 255, 255, 0.45);
+    --brand-focus-shadow: 0 0 40px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    --def-transform-scale : scale(1.05);
+    --def-transition : all 0.2s ease-in-out;
+}
+
+body {
+    background-image: url(./assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.loginpage {
+    background: var(--brand-bg);
+    border: 2px solid var(--brand-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: var(--brand-box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 450px;
+}
+
+.loginpage h1 {
+    color: white;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.loginpage input[type="text"],
+.loginpage input[type="password"] {
+    background: var(--brand-bg);
+    border: 2px solid var(--brand-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: var(--brand-box-shadow);
+    padding-left: 1.5rem;
+    padding-right: 3.5rem;
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 1rem;
+    margin: 0.25rem 0;
+}
+
+.loginpage input:focus {
+    outline: none;
+    border: 2px solid var(--brand-focus-border);
+    box-shadow: var(--brand-focus-shadow);
+}
+
+.loginpage input[type="text"] {
+    background-image: url(./assets/user.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 90%;
+}
+
+.loginpage input[type="password"] {
+    background-image: url(./assets/lock.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 90%;
+}
+
+.loginpage input::placeholder {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.loginpage form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.remember-me {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.remember-me label {
+    color: var(--brandcolor-1);
+}
+
+.remember-me a {
+    color: var(--brandcolor-1);
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.no-account {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--brandcolor-1);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.no-account a {
+    text-decoration: none;
+    color: var(--brandcolor-1);
+}
+
+.remember-me a:hover, .remember:hover{
+    transition: var(--def-transition);
+    transform: scale(1.05);
+    color: black;
+}
+
+.login-btn:hover {
+    transition: var(--def-transition);
+    transform: var(--def-transform-scale);
+    background-color: black;
+    color: white;
+}
+
+.no-account a:hover{
+    transition: var(--def-transition);
+    transform: var(--def-transform-scale);
+    color: black;
+}
+
+/* Tablet Devices (Portrait) - 768px and below */
+@media screen and (max-width: 768px) {
+    .loginpage {
+        padding: 2.5rem 2rem;
+        max-width: 400px;
+    }
+
+    .loginpage h1 {
+        font-size: 1.75rem;
+    }
+
+    .remember-me {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 0.75rem 2rem;
+    }
+}
+
+/* Mobile Devices (Landscape) - 576px and below */
+@media screen and (max-width: 576px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .loginpage {
+        padding: 2rem 1.5rem;
+        border-radius: 0.75rem;
+        max-width: 380px;
+    }
+
+    .loginpage h1 {
+        font-size: 1.5rem;
+    }
+
+    .loginpage input[type="text"],
+    .loginpage input[type="password"] {
+        height: 3rem;
+        font-size: 0.9rem;
+        padding-left: 1.25rem;
+        padding-right: 3rem;
+    }
+
+    .loginpage input::placeholder {
+        font-size: 0.9rem;
+    }
+
+    .remember-me {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .login-btn {
+        padding: 0.7rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .submit {
+        margin-top: 1.5rem;
+    }
+
+    .no-account {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Devices - 400px and below */
+@media screen and (max-width: 400px) {
+    .loginpage {
+        padding: 1.75rem 1.25rem;
+        max-width: 340px;
+    }
+
+    .loginpage h1 {
+        font-size: 1.35rem;
+    }
+
+    .loginpage input[type="text"],
+    .loginpage input[type="password"] {
+        height: 2.8rem;
+        font-size: 0.85rem;
+        background-size: 1.25rem;
+    }
+
+    .loginpage input::placeholder {
+        font-size: 0.85rem;
+    }
+
+    .remember-me {
+        font-size: 0.75rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .login-btn {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .no-account {
+        font-size: 0.85rem;
+    }
+}
+
+/* Large Desktops - 1200px and above */
+@media screen and (min-width: 1200px) {
+    .loginpage {
+        padding: 3.5rem 3rem;
+        max-width: 500px;
+    }
+
+    .loginpage h1 {
+        font-size: 2.25rem;
+    }
+
+    .loginpage input[type="text"],
+    .loginpage input[type="password"] {
+        height: 3.4rem;
+    }
+
+    .login-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* Extra Small Devices (Portrait) - 320px and below */
+@media screen and (max-width: 320px) {
+    .loginpage {
+        padding: 1.5rem 1rem;
+        max-width: 300px;
+    }
+
+    .loginpage h1 {
+        font-size: 1.25rem;
+    }
+
+    .loginpage input[type="text"],
+    .loginpage input[type="password"] {
+        height: 2.6rem;
+        font-size: 0.8rem;
+        padding-left: 1rem;
+        padding-right: 2.5rem;
+        background-size: 1.1rem;
+    }
+
+    .loginpage input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .login-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .no-account {
+        font-size: 0.8rem;
+    }
+}
