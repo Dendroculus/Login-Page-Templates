@@ -10,12 +10,13 @@
 
 A small collection of polished, responsive login page templates built only with HTML and CSS — no JavaScript. Copy, adapt, and drop these into your project for fast, accessible authentication screens.
 
-## 🖼️ Template gallery 
-Add screenshots to `.github/previews/` and update preview paths and demo links when you publish demos (GitHub Pages or other hosting).
+## 🖼️ Template Preview
 
-- Basic Login — clean, single-column form  
-- Card Login — centered card-style form  
-- Split-Screen — graphic + form layout
+### Template 1
+![Template 1 Preview](/Preview/Template%201.png) <br>
+
+### Template 2
+![Template 2 Preview](/Preview/Template%202.png) <br>
 
 ## ✨ Highlights 
 - Static HTML + CSS only (no JS)  
