@@ -10,6 +10,12 @@
     font-family: Josesif-Sans;
 }
 
+:root {
+    --brand-color1 : rgb(165, 94, 222);
+    --brand-color2 : rgb(173, 45, 205);
+    --brand-color3 : rgb(129, 31, 153);
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -33,6 +39,7 @@ body {
 .left {
     background-color: white;
     padding: 2rem 0;
+    border-radius: 16px 0 0 16px;
 }
 
 .left header {
@@ -75,13 +82,15 @@ body {
 
 .forgot-pass {
     margin-top: 1rem;
+    text-decoration: none;
+    color: var(--brand-color2);
 }
 
 .footer-log-in-btn {
     width: 100%;
     border: none;
     font-size: 1.1rem;
-    background-color: rgb(158, 88, 215);
+    background-color: var(--brand-color1);
     color: white;
     border-radius: 12px;
     padding: 0.75rem;
@@ -89,7 +98,27 @@ body {
 }
 
 .continue-with {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    gap: 1rem; 
+    width: 100%; 
+    margin: 0 auto; 
+    color: #666; 
+}
+
+.continue-with::before {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.continue-with::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
 }
 
 .socials {
@@ -98,7 +127,7 @@ body {
     gap: 1rem;
 }
 
-.socials img {
+.socials-img img{
     width: 2rem;
     height: 2rem;
 }
@@ -107,4 +136,371 @@ body {
     background-image: url(./assets/bg-image2.png);
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 0 16px 16px 0;
+}
+
+.socials-img:hover {
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-log-in-btn:hover {
+    background-color: var(--brand-color2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+.forgot-pass:hover {
+    color: var(--brand-color3);
+}
+
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 70%;
+        height: 85%;
+    }
+
+    .left header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .left header p {
+        font-size: 1.2rem;
+    }
+    
+    .form-field {
+        width: 24rem;
+    }
+    
+    .form-field input {
+        height: 3rem;
+        font-size: 1.1rem;
+    }
+    
+    .left footer {
+        width: 24rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    
+    .socials-img img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        height: auto;
+    }
+    
+    .left header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .left header p {
+        font-size: 1.1rem;
+    }
+    
+    .form-field {
+        width: 22rem;
+    }
+    
+    .form-field input {
+        height: 2.8rem;
+    }
+    
+    .left footer {
+        width: 22rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 1.1rem;
+        padding: 0.9rem;
+    }
+    
+    .socials-img img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 85%;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .left {
+        border-radius: 16px;
+        padding: 2rem 0;
+    }
+    
+    .right {
+        display: none;
+    }
+    
+    .left header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .left header p {
+        font-size: 0.95rem;
+    }
+    
+    .form-field {
+        width: 18rem;
+    }
+    
+    .form-field input {
+        height: 2.3rem;
+    }
+    
+    .left footer {
+        width: 18rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    
+    .left {
+        padding: 1.5rem 0;
+        border-radius: 16px;
+    }
+    
+    .right {
+        display: none;
+    }
+    
+    .left header {
+        margin: 1rem 0;
+        gap: 0.5rem;
+    }
+    
+    .left header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .left header p {
+        font-size: 0.85rem;
+    }
+    
+    .left form {
+        gap: 1rem;
+    }
+    
+    .form-field {
+        width: 16rem;
+    }
+    
+    .form-field label {
+        font-size: 0.9rem;
+    }
+    
+    .form-field input {
+        height: 2.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .left footer {
+        width: 16rem;
+        gap: 0.8rem;
+    }
+    
+    .forgot-pass {
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+    }
+    
+    .continue-with {
+        font-size: 0.85rem;
+    }
+    
+    .socials-img img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+    
+    .left {
+        padding: 1.2rem 0;
+        border-radius: 12px;
+    }
+    
+    .right {
+        display: none;
+    }
+    
+    .left header {
+        margin: 0.8rem 0;
+    }
+    
+    .left header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .left header p {
+        font-size: 0.8rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    .left form {
+        gap: 0.8rem;
+    }
+    
+    .form-field {
+        width: 14rem;
+    }
+    
+    .form-field label {
+        font-size: 0.85rem;
+    }
+    
+    .form-field input {
+        height: 2rem;
+        font-size: 0.85rem;
+        padding: 0 0.8rem;
+    }
+    
+    .left footer {
+        width: 14rem;
+        gap: 0.7rem;
+    }
+    
+    .forgot-pass {
+        font-size: 0.8rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+    
+    .continue-with {
+        font-size: 0.8rem;
+    }
+    
+    .socials {
+        gap: 0.8rem;
+    }
+    
+    .socials-img img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        width: 98%;
+        height: auto;
+    }
+    
+    .left {
+        padding: 1rem 0;
+        border-radius: 12px;
+    }
+    
+    .right {
+        display: none;
+    }
+    
+    .left header {
+        margin: 0.5rem 0;
+    }
+    
+    .left header h1 {
+        font-size: 1.1rem;
+    }
+    
+    .left header p {
+        font-size: 0.75rem;
+        padding: 0 0.5rem;
+    }
+    
+    .left form {
+        gap: 0.6rem;
+    }
+    
+    .form-field {
+        width: 12rem;
+    }
+    
+    .form-field label {
+        font-size: 0.8rem;
+    }
+    
+    .form-field input {
+        height: 1.8rem;
+        font-size: 0.8rem;
+        padding: 0 0.6rem;
+        margin-top: 0.3rem;
+    }
+    
+    .left footer {
+        width: 12rem;
+        gap: 0.6rem;
+        margin: 0.3rem auto;
+    }
+    
+    .forgot-pass {
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+    }
+    
+    .footer-log-in-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .continue-with {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .socials {
+        gap: 0.6rem;
+    }
+    
+    .socials-img img {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    
+    .socials-img:hover {
+        transform: scale(1.2);
+    }
+    
+    .footer-log-in-btn:hover {
+        transform: scale(1.02);
+    }
 }
