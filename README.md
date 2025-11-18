@@ -3,12 +3,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/Dendroculus/Login-Page-Templates?style=flat-square" alt="License"></a>
   <a href="https://github.com/Dendroculus/Login-Page-Templates"><img src="https://img.shields.io/github/repo-size/Dendroculus/Login-Page-Templates?style=flat-square" alt="Repo Size"></a>
   <a href="https://github.com/Dendroculus/Login-Page-Templates/issues"><img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions Welcome"></a>
 </p>
 
-A small collection of polished, responsive login page templates built only with HTML and CSS — no JavaScript. Copy, adapt, and drop these into your project for fast, accessible authentication screens.
+A small collection of polished, responsive login page templates built only with HTML and CSS with light JavaScript. Copy, adapt, and drop these into your project for fast, accessible authentication screens.
 
 ## 🖼️ Template Preview
 
@@ -19,7 +20,7 @@ A small collection of polished, responsive login page templates built only with 
 ![Template 2 Preview](/Preview/Template%202.png) <br>
 
 ## ✨ Highlights 
-- Static HTML + CSS only (no JS)  
+- Static HTML,  CSS with lightweight JavaScript  
 - Responsive and accessibility-minded  
 - Lightweight and easy to customize
 

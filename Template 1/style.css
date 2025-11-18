@@ -168,6 +168,24 @@ body {
     color: black;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.error {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+}
+
 @media screen and (max-width: 768px) {
     .loginpage {
         padding: 2.5rem 2rem;
