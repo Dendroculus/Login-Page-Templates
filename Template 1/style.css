@@ -354,3 +354,69 @@ body {
         font-size: 0.8rem;
     }
 }
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: visible; 
+    margin: 0.25rem 0;
+}
+
+    
+.loginpage input[type="text"],
+.loginpage input[type="password"],
+.loginpage input[type="email"] {
+    background-image: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 9999; 
+    display: block;
+}
+
+
+.user-icon   { background-image: url(./assets/user.png); }
+.lock-icon   { background-image: url(./assets/lock.png); }
+.mail-icon   { background-image: url(./assets/mail.png); }
+
+/* 2) Chrome / Chromium-based browsers */
+.loginpage input:-webkit-autofill,
+.loginpage input:-webkit-autofill:hover,
+.loginpage input:-webkit-autofill:focus,
+.loginpage input:-webkit-autofill:active {
+  -webkit-text-fill-color: white;       
+  caret-color: white;
+  -webkit-box-shadow: 0 0 0 1000px var(--brand-bg) inset; 
+  box-shadow: 0 0 40px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1);
+  border: 2px solid var(--brand-border);
+  background-image: none;                
+  transition: background-color 5000s ease-in-out 0s; 
+}
+
+.loginpage input:-webkit-autofill:focus {
+  border: 2px solid var(--brand-focus-border);
+  -webkit-box-shadow: 0 0 0 1000px var(--brand-bg) inset, var(--brand-focus-shadow);
+}
+
+/* 3) Firefox */
+.loginpage input:-moz-autofill,
+.loginpage input:-moz-autofill:hover,
+.loginpage input:-moz-autofill:focus,
+.loginpage input:-moz-autofill:active {
+  -moz-text-fill-color: white;
+  caret-color: white;
+  box-shadow: 0 0 0 1000px var(--brand-bg) inset;
+  border: 2px solid var(--brand-border);
+  background-image: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
