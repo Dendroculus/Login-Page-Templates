@@ -72,6 +72,7 @@ body {
     margin: 0.25rem 0;
 }
 
+
 .loginpage input:focus {
     outline: none;
     border: 2px solid var(--brand-focus-border);
@@ -353,4 +354,3 @@ body {
         font-size: 0.8rem;
     }
 }
-

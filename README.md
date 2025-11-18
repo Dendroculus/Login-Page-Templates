@@ -14,7 +14,8 @@ A small collection of polished, responsive login page templates built only with 
 ## 🖼️ Template Preview
 
 ### Template 1
-![Template 1 Preview](/Preview/Template%201.png) <br>
+Login Page 
+![Template 1 Preview](/Preview/Template%201/Login.png) <br>
 
 ### Template 2
 ![Template 2 Preview](/Preview/Template%202.png) <br>
