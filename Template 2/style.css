@@ -156,6 +156,32 @@ body {
     color: var(--brand-color3);
 }
 
+.no-account {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.no-account a {
+    text-decoration: none;
+    color: var(--brand-color2);
+}
+
+.no-account a:hover {
+    transform: scale(1.05);
+    color: var(--brand-color3);
+}
+
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus,
+.form-field input:-webkit-autofill:active {
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0 1000px var(--brand-bg) inset; 
+    border: 1px solid gray;
+    background-image: none;                
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
 
 @media screen and (min-width: 1200px) {
     .container {
