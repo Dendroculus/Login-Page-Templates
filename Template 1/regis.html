@@ -3,15 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="loginpage" aria-labelledby="login-heading">
-        <h1 id="login-heading">Login</h1>
+        <h1 id="login-heading">Register</h1>
 
         <form id="loginForm" action="#" novalidate>
+            
             <div class="login glass">
+
+                <label for="email" class="sr-only">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="email"
+                    minlength="8"
+                    maxlength="50"
+                    autocomplete="email"
+                    required
+                    aria-describedby="invalid-email"
+                />
+                <div id="invalid-email" class="error" aria-live="polite"></div>
+
                 <label for="username" class="sr-only">Username</label>
                 <input
                     type="text"
@@ -39,7 +55,6 @@
                     aria-describedby="invalid-pass"
                 />
                 <div id="invalid-pass" class="error" aria-live="polite"></div>
-
                 <div id="same-user-pw" class="error" aria-live="polite"></div>
             </div>
 
@@ -57,11 +72,11 @@
         </form>
 
         <div class="no-account">
-            <p>Don't have an account?</p>
-            <a href="regis.html">Register</a>
+            <p>Already have an account?</p>
+            <a href="index.html">Login</a>
         </div>
     </main>
 
-    <script src="login.js"></script>
+    <script src="regis.js"></script>
 </body>
 </html>
