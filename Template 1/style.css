@@ -62,6 +62,7 @@ body {
     background: var(--brand-bg);
     border: 2px solid var(--brand-border);
     backdrop-filter: blur(10px);
+    font-size: 1rem;
     -webkit-backdrop-filter: blur(15px);
     box-shadow: var(--brand-box-shadow);
     padding-left: 1.5rem;
@@ -394,13 +395,13 @@ body {
 .loginpage input:-webkit-autofill:hover,
 .loginpage input:-webkit-autofill:focus,
 .loginpage input:-webkit-autofill:active {
-  -webkit-text-fill-color: white;       
-  caret-color: white;
+  -webkit-text-fill-color: black;
   -webkit-box-shadow: 0 0 0 1000px var(--brand-bg) inset; 
   box-shadow: 0 0 40px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1);
   border: 2px solid var(--brand-border);
   background-image: none;                
   transition: background-color 5000s ease-in-out 0s; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .loginpage input:-webkit-autofill:focus {
@@ -413,10 +414,10 @@ body {
 .loginpage input:-moz-autofill:hover,
 .loginpage input:-moz-autofill:focus,
 .loginpage input:-moz-autofill:active {
-  -moz-text-fill-color: white;
-  caret-color: white;
+  -moz-text-fill-color: black;
   box-shadow: 0 0 0 1000px var(--brand-bg) inset;
   border: 2px solid var(--brand-border);
   background-image: none;
   transition: background-color 5000s ease-in-out 0s;
 }
+
