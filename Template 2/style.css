@@ -84,6 +84,7 @@ body {
     margin-top: 1rem;
     text-decoration: none;
     color: var(--brand-color2);
+    align-self: flex-start;
 }
 
 .footer-log-in-btn {
@@ -182,6 +183,9 @@ body {
     transition: background-color 5000s ease-in-out 0s; 
 }
 
+.form-field input:focus, .form-field input:focus-visible {
+    outline: none;
+}
 
 @media screen and (min-width: 1200px) {
     .container {
