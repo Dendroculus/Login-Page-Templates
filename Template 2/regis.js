@@ -6,55 +6,66 @@ form.addEventListener('submit', register);
 function register(event) {
     event.preventDefault();
 
-    const usernameEl = document.getElementById('username');
-    const passwordEl = document.getElementById('password');
-    const emailEl = document.getElementById('email');
+    const nameElement = document.getElementById('username');
+    const passwordElement = document.getElementById('password');
+    const emailElement = document.getElementById('email');
+    const confirmPasswordElement = document.getElementById('reg-confirm');
 
-    const username = usernameEl.value.trim();
-    const password = passwordEl.value.trim();
-    const email = emailEl.value.trim();
+    const fullname = nameElement.value.trim();
+    const password = passwordElement.value.trim();
+    const email = emailElement.value.trim()
+    const confirmPassword = confirmPasswordElement.value.trim();
 
     const userError = document.getElementById('invalid-user');
     const passError = document.getElementById('invalid-pass');
     const emailError = document.getElementById('invalid-email');    
     const sameUserPw = document.getElementById('same-user-pw');
+    const confirmPassError = document.getElementById('invalid-confirm-pass');
 
     userError.textContent = '';
     passError.textContent = '';
     emailError.textContent = '';
     sameUserPw.textContent = '';
+    confirmPassError.textContent = '';
+
+    if (fullname === '') {
+        userError.textContent = 'Username cannot be empty';
+        nameElement.focus();
+        setTimeout(() => userError.textContent = '', 3000);
+        return;
+    }
+    if (fullname.length < 3) {
+        userError.textContent = 'Username must be at least 3 characters';
+        nameElement.focus();
+        setTimeout(() => userError.textContent = '', 3000);
+        return;
+    }
 
 
     if (!validateEmail(email)) {
         emailError.textContent = 'Please enter a valid email address';
-        emailEl.focus();
+        emailElement.focus();
         setTimeout(() => emailError.textContent = '', 3000);
-        return;
-    }
-
-    if (username === '') {
-        userError.textContent = 'Username cannot be empty';
-        usernameEl.focus();
-        setTimeout(() => userError.textContent = '', 3000);
-        return;
-    }
-    if (username.length < 3) {
-        userError.textContent = 'Username must be at least 3 characters';
-        usernameEl.focus();
-        setTimeout(() => userError.textContent = '', 3000);
         return;
     }
 
     if (password === '') {
         passError.textContent = 'Password cannot be empty';
-        passwordEl.focus();
+        passwordElement.focus();
         setTimeout(() => passError.textContent = '', 3000);
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        confirmPassError.textContent = 'Passwords do not match';
+        confirmPasswordElement.focus();
+        setTimeout(() => confirmPassError.textContent = '', 3000);
         return;
     }
 
     if (password.length < 8) {
         passError.textContent = 'Password must be at least 8 characters';
-        passwordEl.focus();
+        passwordElement.focus();
         setTimeout(() => passError.textContent = '', 3000);
         return;
     }
@@ -62,18 +73,17 @@ function register(event) {
     if (!validatePassword(password)) {
         passError.textContent =
             'Password must include uppercase, lowercase, a number, and a special character';
-        passwordEl.focus();
+        passwordElement.focus();
         setTimeout(() => passError.textContent = '', 3000);
         return;
     }
 
-    if (username === password) {
+    if (fullname === password) {
         sameUserPw.textContent = 'Username and password should not be the same';
-        passwordEl.focus();
+        passwordElement.focus();
         setTimeout(() => sameUserPw.textContent = '', 3000);
         return;
     }
-
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Logging in...';

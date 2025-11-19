@@ -16,6 +16,12 @@
     --brand-color3: rgb(129, 31, 153);
 }
 
+.error {
+    color: red;
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -25,6 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1rem 0;
+    overflow: hidden;
 }
 
 .container {
@@ -36,7 +43,7 @@ body {
 }
 
 .left {
-    background-color: rgba(255, 255, 255, 0.85); 
+    background-color: rgba(255, 255, 255, 0.75); 
     -webkit-backdrop-filter: blur(8px); 
     backdrop-filter: blur(8px);       
     padding: 2rem 0;

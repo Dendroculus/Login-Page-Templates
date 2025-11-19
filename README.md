@@ -1,4 +1,7 @@
+<div align="center">
+
 # Login Page Templates ⚡️🎨
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
@@ -13,12 +16,19 @@ A small collection of polished, responsive login page templates built only with 
 
 ## 🖼️ Template Preview
 
+<div align="center">
+
 ### Template 1
-Login Page 
 ![Template 1 Preview](/Preview/Template%201/Login.png) <br>
+![Template 1 Registration Preview](/Preview/Template%201/Register.png) <br>
+
+---
 
 ### Template 2
-![Template 2 Preview](/Preview/Template%202.png) <br>
+![Template 2 Preview](/Preview/Template%202/Login.png) <br>
+![Template 2 Preview](/Preview/Template%202/Register.png) <br>
+
+</div>
 
 ## ✨ Highlights 
 - Static HTML,  CSS with lightweight JavaScript  

@@ -6,22 +6,30 @@ form.addEventListener('submit', login);
 function login(event) {
     event.preventDefault();
 
-    const usernameElement = document.getElementById('username');
+    const emailElement = document.getElementById('email');
     const passwordElement = document.getElementById('password');
 
-    const username = usernameElement.value.trim();
+    const email = emailElement.value.trim();
     const password = passwordElement.value.trim();
 
-    const userError = document.getElementById('invalid-user');
+    const emailError = document.getElementById('invalid-user');
     const passError = document.getElementById('invalid-pass');
 
-    userError.textContent = '';
+    emailError.textContent = '';
     passError.textContent = '';
 
-    if (username === '') {
-        userError.textContent = 'Username cannot be empty';
-        usernameElement.focus();
-        setTimeout(() => userError.textContent = '', 3000);
+    
+    if (!validateEmail(email)) {
+        emailError.textContent = 'Please enter a valid email address';
+        emailElement.focus();
+        setTimeout(() => emailError.textContent = '', 3000);
+        return;
+    }
+
+    if (email === '') {
+        emailError.textContent = 'Email cannot be empty';
+        emailElement.focus();
+        setTimeout(() => emailError.textContent = '', 3000);
         return;
     }
 
@@ -43,4 +51,7 @@ function login(event) {
     }, 800);
 }
 
-
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
