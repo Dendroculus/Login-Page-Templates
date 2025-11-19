@@ -11,25 +11,24 @@
 }
 
 :root {
-    --brand-color1 : rgb(165, 94, 222);
-    --brand-color2 : rgb(173, 45, 205);
-    --brand-color3 : rgb(129, 31, 153);
+    --brand-color1: rgb(165, 94, 222);
+    --brand-color2: rgb(173, 45, 205);
+    --brand-color3: rgb(129, 31, 153);
 }
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     background-image: url(./assets/bg-image.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 1rem 0;
 }
 
 .container {
     display: flex;
-    width: 60%;
-    height: 80%;
 }
 
 .left, .right {
@@ -37,9 +36,14 @@ body {
 }
 
 .left {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85); 
+    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);       
     padding: 2rem 0;
     border-radius: 16px 0 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.45); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);   
+    color: #111; 
 }
 
 .left header {
@@ -58,7 +62,7 @@ body {
 }
 
 .form-field {
-    width: 20rem;
+    width: min(20rem, 90%);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -72,8 +76,24 @@ body {
     border-radius: 0.5rem;
 }
 
+.form-field input:focus,
+.form-field input:focus-visible {
+    outline: none;
+}
+
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover,
+.form-field input:-webkit-autofill:focus,
+.form-field input:-webkit-autofill:active {
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    border: 1px solid gray;
+    background-image: none;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .left footer {
-    width: 20rem;
+    width: min(20rem, 90%);
     margin: 0.5rem auto;
     display: flex;
     flex-direction: column;
@@ -87,7 +107,12 @@ body {
     align-self: flex-start;
 }
 
-.footer-log-in-btn {
+.forgot-pass:hover {
+    color: var(--brand-color3);
+}
+
+.footer-log-in-btn,
+.footer-register-btn {
     width: 100%;
     border: none;
     font-size: 1.1rem;
@@ -95,26 +120,27 @@ body {
     color: white;
     border-radius: 12px;
     padding: 0.75rem;
-    margin: 0 auto;
+    cursor: pointer;
+}
+
+.footer-log-in-btn:hover,
+.footer-register-btn:hover {
+    background-color: var(--brand-color2);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
 }
 
 .continue-with {
     display: flex;
     align-items: center;
-    text-align: center; 
-    gap: 1rem; 
-    width: 100%; 
-    margin: 0 auto; 
-    color: #666; 
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    color: #666;
 }
 
-.continue-with::before {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: #ccc;
-}
-
+.continue-with::before,
 .continue-with::after {
     content: "";
     flex-grow: 1;
@@ -128,9 +154,15 @@ body {
     gap: 1rem;
 }
 
-.socials-img img{
+.socials-img img {
     width: 2rem;
     height: 2rem;
+}
+
+.socials-img:hover {
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .right {
@@ -140,28 +172,13 @@ body {
     border-radius: 0 16px 16px 0;
 }
 
-.socials-img:hover {
-    transform: scale(1.3);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.footer-log-in-btn:hover {
-    background-color: var(--brand-color2);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.05);
-}
-
-.forgot-pass:hover {
-    color: var(--brand-color3);
-}
-
 .no-account {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
+
 .no-account a {
     text-decoration: none;
     color: var(--brand-color2);
@@ -172,21 +189,108 @@ body {
     color: var(--brand-color3);
 }
 
-.form-field input:-webkit-autofill,
-.form-field input:-webkit-autofill:hover,
-.form-field input:-webkit-autofill:focus,
-.form-field input:-webkit-autofill:active {
-    -webkit-text-fill-color: black;
-    -webkit-box-shadow: 0 0 0 1000px var(--brand-bg) inset; 
-    border: 1px solid gray;
-    background-image: none;                
-    transition: background-color 5000s ease-in-out 0s; 
+.terms {
+    width: min(20rem, 90%);
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.3;
+    color: #333;
 }
 
-.form-field input:focus, .form-field input:focus-visible {
-    outline: none;
+.terms input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    accent-color: var(--brand-color2);
+    flex-shrink: 0;
 }
 
+.terms a {
+    color: var(--brand-color2);
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: var(--brand-color3);
+}
+
+/* Registration Page Specific Styles */
+body:has(form button.footer-register-btn) .container {
+    flex-direction: row-reverse;
+}
+
+body:has(form button.footer-register-btn) .left {
+    border-radius: 0 16px 16px 0;
+}
+
+body:has(form button.footer-register-btn) .right {
+    border-radius: 16px 0 0 16px;
+}
+
+body:has(form button.footer-register-btn) .left header {
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+body:has(form button.footer-register-btn) .left header h1 {
+    font-size: 1.9rem;
+}
+
+body:has(form button.footer-register-btn) .left header p {
+    font-size: 0.95rem;
+}
+
+body:has(form button.footer-register-btn) .left form {
+    gap: 1rem;
+}
+
+body:has(form button.footer-register-btn) .form-field label {
+    font-size: 0.95rem;
+}
+
+body:has(form button.footer-register-btn) .form-field input {
+    height: 2.2rem;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+body:has(form button.footer-register-btn) .terms {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+    line-height: 1.2;
+}
+
+body:has(form button.footer-register-btn) .terms input[type="checkbox"] {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+body:has(form button.footer-register-btn) .left footer {
+    gap: 0.8rem;
+    margin: 0 auto;
+}
+
+body:has(form button.footer-register-btn) .footer-register-btn {
+    font-size: 1rem;
+    padding: 0.65rem;
+}
+
+body:has(form button.footer-register-btn) .no-account {
+    font-size: 0.9rem;
+}
+
+body:has(form button.footer-register-btn) .continue-with {
+    font-size: 0.85rem;
+}
+
+body:has(form button.footer-register-btn) .socials-img img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+/* Desktop - Large screens (1200px+) */
 @media screen and (min-width: 1200px) {
     .container {
         width: 70%;
@@ -196,341 +300,449 @@ body {
     .left header h1 {
         font-size: 2.5rem;
     }
-    
+
     .left header p {
         font-size: 1.2rem;
     }
-    
+
     .form-field {
         width: 24rem;
     }
-    
+
     .form-field input {
         height: 3rem;
         font-size: 1.1rem;
     }
-    
+
+    .terms {
+        width: 24rem;
+        font-size: 1rem;
+    }
+
     .left footer {
         width: 24rem;
     }
-    
-    .footer-log-in-btn {
+
+    .footer-log-in-btn,
+    .footer-register-btn {
         font-size: 1.2rem;
         padding: 1rem;
     }
-    
+
     .socials-img img {
         width: 2.5rem;
         height: 2.5rem;
     }
+
+    /* Registration page - Large screens */
+    body:has(form button.footer-register-btn) .left header h1 {
+        font-size: 2.1rem;
+    }
+
+    body:has(form button.footer-register-btn) .left header p {
+        font-size: 1.05rem;
+    }
+
+    body:has(form button.footer-register-btn) .form-field {
+        width: 24rem;
+    }
+
+    body:has(form button.footer-register-btn) .form-field input {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    body:has(form button.footer-register-btn) .terms {
+        width: 24rem;
+        font-size: 0.9rem;
+    }
+
+    body:has(form button.footer-register-btn) .left footer {
+        width: 24rem;
+    }
+
+    body:has(form button.footer-register-btn) .footer-register-btn {
+        font-size: 1.05rem;
+        padding: 0.85rem;
+    }
+
+    body:has(form button.footer-register-btn) .socials-img img {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
 }
 
+/* Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
     .container {
         width: 80%;
         height: auto;
     }
-    
+
     .left header h1 {
         font-size: 2.2rem;
     }
-    
+
     .left header p {
         font-size: 1.1rem;
     }
-    
+
     .form-field {
-        width: 22rem;
+        width: min(22rem, 90%);
     }
-    
+
     .form-field input {
         height: 2.8rem;
     }
-    
-    .left footer {
-        width: 22rem;
+
+    .terms {
+        width: min(22rem, 90%);
+        font-size: 0.95rem;
     }
-    
-    .footer-log-in-btn {
+
+    .left footer {
+        width: min(22rem, 90%);
+    }
+
+    .footer-log-in-btn,
+    .footer-register-btn {
         font-size: 1.1rem;
         padding: 0.9rem;
     }
-    
+
     .socials-img img {
         width: 2.2rem;
         height: 2.2rem;
     }
+
+    /* Registration page - Tablets */
+    body:has(form button.footer-register-btn) .left header h1 {
+        font-size: 1.9rem;
+    }
+
+    body:has(form button.footer-register-btn) .left header p {
+        font-size: 0.95rem;
+    }
+
+    body:has(form button.footer-register-btn) .form-field input {
+        height: 2.3rem;
+        font-size: 0.95rem;
+    }
+
+    body:has(form button.footer-register-btn) .terms {
+        font-size: 0.85rem;
+    }
+
+    body:has(form button.footer-register-btn) .footer-register-btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    body:has(form button.footer-register-btn) .socials-img img {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
 }
 
+/* Small tablets / Large phones (768px and below) */
 @media screen and (max-width: 768px) {
     .container {
-        width: 85%;
-        height: auto;
+        width: 90%;
         flex-direction: column;
     }
-    
+
     .left {
         border-radius: 16px;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
     }
-    
+
     .right {
         display: none;
     }
-    
+
     .left header h1 {
         font-size: 1.8rem;
     }
-    
+
     .left header p {
         font-size: 0.95rem;
     }
-    
+
     .form-field {
-        width: 18rem;
+        width: min(18rem, 95%);
     }
-    
+
     .form-field input {
         height: 2.3rem;
     }
-    
-    .left footer {
-        width: 18rem;
+
+    .terms {
+        width: min(18rem, 95%);
+        font-size: 0.9rem;
     }
-    
-    .footer-log-in-btn {
+
+    .left footer {
+        width: min(18rem, 95%);
+    }
+
+    .footer-log-in-btn,
+    .footer-register-btn {
         font-size: 1rem;
+    }
+
+    /* Reset border radius for registration on mobile */
+    body:has(form button.footer-register-btn) .left {
+        border-radius: 16px;
     }
 }
 
+/* Phones (576px and below) */
 @media screen and (max-width: 576px) {
     .container {
-        width: 90%;
-        height: auto;
+        width: 95%;
     }
-    
+
     .left {
-        padding: 1.5rem 0;
-        border-radius: 16px;
+        padding: 1.5rem 1rem;
     }
-    
-    .right {
-        display: none;
-    }
-    
+
     .left header {
         margin: 1rem 0;
         gap: 0.5rem;
     }
-    
+
     .left header h1 {
         font-size: 1.5rem;
     }
-    
+
     .left header p {
         font-size: 0.85rem;
     }
-    
+
     .left form {
         gap: 1rem;
     }
-    
+
     .form-field {
-        width: 16rem;
+        width: min(16rem, 95%);
     }
-    
+
     .form-field label {
         font-size: 0.9rem;
     }
-    
+
     .form-field input {
         height: 2.2rem;
         font-size: 0.9rem;
     }
-    
+
+    .terms {
+        width: min(16rem, 95%);
+        font-size: 0.85rem;
+    }
+
     .left footer {
-        width: 16rem;
+        width: min(16rem, 95%);
         gap: 0.8rem;
     }
-    
+
     .forgot-pass {
         font-size: 0.85rem;
         margin-top: 0.5rem;
     }
-    
-    .footer-log-in-btn {
+
+    .footer-log-in-btn,
+    .footer-register-btn {
         font-size: 0.95rem;
         padding: 0.65rem;
     }
-    
+
     .continue-with {
         font-size: 0.85rem;
     }
-    
+
     .socials-img img {
         width: 1.8rem;
         height: 1.8rem;
     }
 }
 
+/* Small phones (400px and below) */
 @media screen and (max-width: 400px) {
     .container {
-        width: 95%;
-        height: auto;
+        width: 98%;
     }
-    
+
     .left {
-        padding: 1.2rem 0;
+        padding: 1.2rem 0.8rem;
         border-radius: 12px;
     }
-    
-    .right {
-        display: none;
-    }
-    
+
     .left header {
         margin: 0.8rem 0;
     }
-    
+
     .left header h1 {
         font-size: 1.3rem;
     }
-    
+
     .left header p {
         font-size: 0.8rem;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         text-align: center;
     }
-    
+
     .left form {
         gap: 0.8rem;
     }
-    
+
     .form-field {
-        width: 14rem;
+        width: min(14rem, 95%);
     }
-    
+
     .form-field label {
         font-size: 0.85rem;
     }
-    
+
     .form-field input {
         height: 2rem;
         font-size: 0.85rem;
         padding: 0 0.8rem;
     }
-    
+
+    .terms {
+        width: min(14rem, 95%);
+        font-size: 0.8rem;
+    }
+
     .left footer {
-        width: 14rem;
+        width: min(14rem, 95%);
         gap: 0.7rem;
     }
-    
+
     .forgot-pass {
         font-size: 0.8rem;
     }
-    
-    .footer-log-in-btn {
+
+    .footer-log-in-btn,
+    .footer-register-btn {
         font-size: 0.9rem;
         padding: 0.6rem;
     }
-    
+
     .continue-with {
         font-size: 0.8rem;
     }
-    
+
     .socials {
         gap: 0.8rem;
     }
-    
+
     .socials-img img {
         width: 1.6rem;
         height: 1.6rem;
     }
-}
 
-@media screen and (max-width: 320px) {
-    .container {
-        width: 98%;
-        height: auto;
-    }
-    
-    .left {
-        padding: 1rem 0;
+    body:has(form button.footer-register-btn) .left {
         border-radius: 12px;
     }
-    
-    .right {
-        display: none;
+}
+
+/* Very small phones (320px and below) */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 100%;
     }
-    
+
+    .left {
+        padding: 1rem 0.5rem;
+    }
+
     .left header {
         margin: 0.5rem 0;
     }
-    
+
     .left header h1 {
         font-size: 1.1rem;
     }
-    
+
     .left header p {
-        font-size: 0.75rem;
-        padding: 0 0.5rem;
+        font-size: 0.7rem;
+        padding: 0 0.3rem;
     }
-    
+
     .left form {
         gap: 0.6rem;
     }
-    
+
     .form-field {
-        width: 12rem;
+        width: 95%;
     }
-    
+
     .form-field label {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
-    
+
     .form-field input {
         height: 1.8rem;
-        font-size: 0.8rem;
-        padding: 0 0.6rem;
+        font-size: 0.75rem;
+        padding: 0 0.5rem;
         margin-top: 0.3rem;
     }
-    
+
+    .terms {
+        width: 95%;
+        font-size: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    .terms input[type="checkbox"] {
+        width: 0.85rem;
+        height: 0.85rem;
+    }
+
     .left footer {
-        width: 12rem;
-        gap: 0.6rem;
+        width: 95%;
+        gap: 0.5rem;
         margin: 0.3rem auto;
     }
-    
+
     .forgot-pass {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         margin-top: 0.3rem;
     }
-    
-    .footer-log-in-btn {
-        font-size: 0.85rem;
+
+    .footer-log-in-btn,
+    .footer-register-btn {
+        font-size: 0.8rem;
         padding: 0.5rem;
         border-radius: 8px;
     }
-    
+
     .continue-with {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    .socials {
         gap: 0.5rem;
     }
-    
-    .socials {
-        gap: 0.6rem;
-    }
-    
+
     .socials-img img {
-        width: 1.4rem;
-        height: 1.4rem;
+        width: 1.3rem;
+        height: 1.3rem;
     }
-    
+
     .socials-img:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
-    
-    .footer-log-in-btn:hover {
-        transform: scale(1.02);
+
+    .footer-log-in-btn:hover,
+    .footer-register-btn:hover {
+        transform: scale(1.01);
+    }
+
+    .no-account {
+        font-size: 0.75rem;
     }
 }

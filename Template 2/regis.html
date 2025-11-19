@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <header>
+                <h1>Register</h1>
+                <p>Create your account to get started</p>
+            </header>
+
+            <form action="#" method="post" novalidate>
+                <div class="form-field">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="name" autocomplete="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" autocomplete="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" autocomplete="new-password" required placeholder="••••••••">
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-confirm">Confirm Password</label>
+                    <input type="password" id="reg-confirm" name="confirm_password" autocomplete="new-password" required placeholder="••••••••">
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">
+                        I agree to the <a href="#" aria-label="Read Terms and Conditions">Terms</a> and <a href="#" aria-label="Read Privacy Policy">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <footer>
+                    <button type="submit" class="footer-register-btn">Create Account</button>
+
+                    <div class="no-account">
+                        <p>Already have an account?</p>
+                        <a href="login.html">Log In</a>
+                    </div>
+
+                    <div class="continue-with">Or Continue With</div>
+
+                    <div class="socials">
+                        <a class="socials-img" href="#"><img src="./assets/Google.png" alt="Google"></a>
+                        <a class="socials-img" href="#"><img src="./assets/Github.png" alt="GitHub"></a>
+                        <a class="socials-img" href="#"><img src="./assets/Facebook.png" alt="Facebook"></a>
+                    </div>
+                </footer>
+            </form>
+        </div>
+
+        <div class="right"></div>
+    </div>
+</body>
+</html>

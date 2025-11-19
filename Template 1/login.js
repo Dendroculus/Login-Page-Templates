@@ -26,35 +26,11 @@ function login(event) {
         setTimeout(() => userError.textContent = '', 3000);
         return;
     }
-    if (username.length < 3) {
-        userError.textContent = 'Username must be at least 3 characters';
-        usernameEl.focus();
-        setTimeout(() => userError.textContent = '', 3000);
-        return;
-    }
 
     if (password === '') {
         passError.textContent = 'Password cannot be empty';
         passwordEl.focus();
         setTimeout(() => passError.textContent = '', 3000);
-        return;
-    }
-    if (password.length < 8) {
-        passError.textContent = 'Password must be at least 8 characters';
-        passwordEl.focus();
-        setTimeout(() => passError.textContent = '', 3000);
-        return;
-    }
-    if (!validatePassword(password)) {
-        passError.textContent = 'Password must include uppercase, lowercase, a number, and a special character';
-        passwordEl.focus();
-        setTimeout(() => passError.textContent = '', 3000);
-        return;
-    }
-    if (username === password) {
-        sameUserPw.textContent = 'Username and password should not be the same';
-        passwordEl.focus();
-        setTimeout(() => sameUserPw.textContent = '', 3000);
         return;
     }
 
