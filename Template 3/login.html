@@ -11,18 +11,20 @@
     <div class="top"></div>
     <div class="bottom">
       <h1>Login</h1>
-      <form action="#" method="post" novalidate class="loginform">
+      <form action="#" method="post" novalidate class="loginform" id="loginform">
 
         <div class="form-field input-wrapper user-wrapper">
           <label for="username" class="sr-only">Username</label>
           <input type="text" placeholder="Username" id="username" name="username" autocomplete="username" required>
           <span class="input-icon user-icon" aria-hidden="true"></span>
+          <div class="error" id="invalid-user"></div>
         </div>
 
         <div class="form-field input-wrapper lock-wrapper">
           <label for="password" class="sr-only">Password</label>
           <input type="password" placeholder="Password" id="password" name="password" autocomplete="current-password" required>
           <span class="input-icon lock-icon" aria-hidden="true"></span>
+          <div class="error" id="invalid-pass"></div>
         </div>
 
         <div class="switch-row">
@@ -42,5 +44,7 @@
       </form>
     </div>
   </div>
+  <script src="login.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>

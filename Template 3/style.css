@@ -30,6 +30,8 @@ body {
     width: 400px;
     height: 225px;
     border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .bottom {
@@ -44,6 +46,7 @@ body {
 }
 
 .bottom h1, .create-acc {
+    color: purple;
     text-align: center;
 }
 
@@ -138,6 +141,7 @@ body {
     border-radius: 20px;
     background-color: pink;
     border: none;
+    color: white;
     font-size: 1rem;
 }
 
@@ -216,6 +220,14 @@ input:-moz-autofill:active {
 
 .login-btn:hover {
     background-color: darkmagenta;
+    transition: all 0.2s ease-in-out;;
+    transform: scale(1.06);
+}
+
+.error {
+    color: red;
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
 }
 
 /* Responsive Media Queries */
