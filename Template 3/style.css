@@ -227,7 +227,9 @@ input:-moz-autofill:active {
 .error {
     color: red;
     font-size: 0.7rem;
-    margin-top: 0.25rem;
+    position: absolute;
+    left: 0;
+    bottom: -1  rem; 
 }
 
 /* Responsive Media Queries */

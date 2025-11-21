@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Register</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="top"></div>
     <div class="bottom">
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form action="#" method="post" novalidate class="loginform" id="loginform">
+
+        
+        <div class="form-field input-wrapper user-wrapper">
+          <label for="email" class="sr-only">email</label>
+          <input type="text" placeholder="Email" id="email" name="email" autocomplete="email" required>
+          <span class="input-icon user-icon" aria-hidden="true"></span>
+          <div class="error" id="invalid-email"></div>
+        </div>
 
         <div class="form-field input-wrapper user-wrapper">
           <label for="username" class="sr-only">Username</label>
@@ -25,6 +33,7 @@
           <input type="password" placeholder="Password" id="password" name="password" autocomplete="current-password" required>
           <span class="input-icon lock-icon" aria-hidden="true"></span>
           <div class="error" id="invalid-pass"></div>
+          <div class="error" id="same-user-pw"></div>
         </div>
 
         <div class="switch-row">
@@ -39,12 +48,12 @@
           <a href="#" class="forgot-pw">Forgot Password?</a>
         </div>
 
-        <button type="submit" id="login-btn" class="login-btn">Login</button>
-        <a href="./regis.html" class="create-acc">Create Account</a>
+        <button type="submit" id="regis-btn" class="login-btn">Register</button>
+        <a href="./login.html" class="create-acc">Back to Login</a>
       </form>
     </div>
   </div>
-  <script src="login.js"></script>
+  <script src="regis.js"></script>
   <script src="carousel.js"></script>
 </body>
 </html>
