@@ -28,6 +28,11 @@ A small collection of polished, responsive login page templates built only with 
 ![Template 2 Preview](/Preview/Template%202/Login.png) <br>
 ![Template 2 Preview](/Preview/Template%202/Register.png) <br>
 
+---
+
+### Template 3
+![Template 3 Preview](/Preview/Template%203/Login.png) <br>
+
 </div>
 
 ## ✨ Highlights 

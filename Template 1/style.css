@@ -191,6 +191,8 @@ body {
 .lock-icon { background-image: url(./assets/lock.png); }
 .mail-icon { background-image: url(./assets/mail.png); }
 
+
+/* to fix autocomplete messing appearance */
 .loginpage input:-webkit-autofill,
 .loginpage input:-webkit-autofill:hover,
 .loginpage input:-webkit-autofill:focus,

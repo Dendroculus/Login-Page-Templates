@@ -1,0 +1,393 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    background-image: url(./assets/bg-image.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    background-image: url(./assets/bg-image1.png);
+    background-size: cover;
+    width: 400px;
+    height: 225px;
+    border-radius: 10px 10px 0 0;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 1rem 3rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.bottom h1, .create-acc {
+    text-align: center;
+}
+
+.bottom form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ccc;
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    top: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: purple;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+.remember-me, .forgot-pw, .create-acc {
+    font-size: 0.85rem;
+    color: purple;
+    font-weight: bold;
+}
+
+.remember-me {
+  display: inline-block;
+}
+
+.remember-me:hover, .forgot-pw:hover, .create-acc:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: darkmagenta;
+}
+
+.forgot-pw, .create-acc {
+    text-decoration: none;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.7rem 3.5rem; 
+    border-radius: 20px;
+    background-color: pink;
+    border: none;
+    font-size: 1rem;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    box-shadow: 0 0 5px palevioletred;
+    color: white;
+    caret-color: white;
+}
+
+.input-wrapper input::placeholder {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.user-icon { background-image: url(./assets/user.png); }
+.lock-icon { background-image: url(./assets/padlock.png); }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px pink inset;
+    box-shadow: 0 0 5px palevioletred;
+    transition: background-color 5000s ease-in-out 0s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:-moz-autofill,
+input:-moz-autofill:hover,
+input:-moz-autofill:focus,
+input:-moz-autofill:active {
+    -moz-text-fill-color: white;
+    box-shadow: 0 0 0 1000px pink inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: darkmagenta;
+}
+
+/* Responsive Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .top {
+        width: 380px;
+        height: 215px;
+    }
+
+    .bottom {
+        width: 380px;
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        width: 360px;
+        height: 200px;
+    }
+
+    .bottom {
+        width: 360px;
+        padding: 1rem 2rem;
+    }
+
+    .bottom h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .top {
+        width: 340px;
+        height: 190px;
+    }
+
+    .bottom {
+        width: 340px;
+        padding: 1rem 1.75rem;
+    }
+
+    .input-wrapper input {
+        padding: 0.65rem 3rem;
+        font-size: 0.95rem;
+    }
+
+    .remember-me, .forgot-pw, .create-acc {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top {
+        width: 300px;
+        height: 170px;
+    }
+
+    .bottom {
+        width: 300px;
+        padding: 1rem 1.5rem;
+        gap: 0.85rem;
+    }
+
+    .bottom h1 {
+        font-size: 1.3rem;
+    }
+
+    .bottom form {
+        gap: 0.85rem;
+    }
+
+    .input-wrapper input {
+        padding: 0.6rem 2.75rem;
+        font-size: 0.9rem;
+    }
+
+    .input-wrapper input::placeholder {
+        font-size: 0.85rem;
+    }
+
+    .remember-me, .forgot-pw, .create-acc {
+        font-size: 0.75rem;
+    }
+
+    .switch {
+        width: 42px;
+        height: 20px;
+    }
+
+    .slider::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .switch input:checked + .slider::before {
+        transform: translateX(22px);
+    }
+
+    .login-btn {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .top {
+        width: 280px;
+        height: 160px;
+    }
+
+    .bottom {
+        width: 280px;
+        padding: 0.85rem 1.25rem;
+        gap: 0.75rem;
+    }
+
+    .bottom h1 {
+        font-size: 1.2rem;
+    }
+
+    .bottom form {
+        gap: 0.75rem;
+    }
+
+    .input-wrapper input {
+        padding: 0.55rem 2.5rem;
+        font-size: 0.85rem;
+    }
+
+    .input-wrapper input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .input-wrapper .input-icon {
+        width: 18px;
+        height: 18px;
+        left: 12px;
+    }
+
+    .remember-me, .forgot-pw, .create-acc {
+        font-size: 0.7rem;
+    }
+
+    .switch {
+        width: 38px;
+        height: 18px;
+    }
+
+    .slider::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    .switch input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+
+    .login-btn {
+        font-size: 0.9rem;
+        padding: 0.35rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .top {
+        width: 400px;
+        height: 225px;
+    }
+
+    .bottom {
+        width: 400px;
+        padding: 1rem 3rem;
+    }
+}

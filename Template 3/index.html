@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="bottom">
+      <h1>Login</h1>
+      <form action="#" method="post" novalidate class="loginform">
+
+        <div class="form-field input-wrapper user-wrapper">
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" placeholder="Username" id="username" name="username" autocomplete="username" required>
+          <span class="input-icon user-icon" aria-hidden="true"></span>
+        </div>
+
+        <div class="form-field input-wrapper lock-wrapper">
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" placeholder="Password" id="password" name="password" autocomplete="current-password" required>
+          <span class="input-icon lock-icon" aria-hidden="true"></span>
+        </div>
+
+        <div class="switch-row">
+          <div class="left-group">
+            <label class="switch">
+              <input type="checkbox" id="remember" name="remember">
+              <span class="slider"></span>
+            </label>
+            <label for="remember" class="remember-me">Remember me</label>
+          </div>
+
+          <a href="#" class="forgot-pw">Forgot Password?</a>
+        </div>
+
+        <button type="submit" id="login-btn" class="login-btn">Login</button>
+        <a href="#" class="create-acc">Create Account</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
