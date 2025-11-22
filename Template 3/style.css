@@ -220,7 +220,7 @@ input:-moz-autofill:active {
 
 .login-btn:hover {
     background-color: darkmagenta;
-    transition: all 0.2s ease-in-out;;
+    transition: all 0.2s ease-in-out;
     transform: scale(1.06);
 }
 
@@ -228,8 +228,8 @@ input:-moz-autofill:active {
     color: red;
     font-size: 0.7rem;
     position: absolute;
-    left: 0;
-    bottom: -1  rem; 
+    left: 1rem;
+    bottom: -1rem; 
 }
 
 /* Responsive Media Queries */
