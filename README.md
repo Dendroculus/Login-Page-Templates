@@ -81,11 +81,6 @@ Fork → add a folder under `templates/<name>/` with `index.html`, `styles.css`,
 ## 🐛 Reporting issues 
 Open an issue with: template path, browser/device, steps to reproduce, and screenshots if possible.
 
-## 🛣️ Roadmap ideas 
-- Add themed variants (dark/light) for each template.  
-- Provide SCSS source and a small style system for faster theming.  
-- Add live demo pages hosted with GitHub Pages.
-
 ## 📜 License & credits
 This project is MIT licensed — see `LICENSE`. Templates may reference third-party fonts/icons — keep their licenses in mind.
 
