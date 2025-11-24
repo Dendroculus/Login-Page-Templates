@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login & Registration Form</title>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="diagonal-bg"></div>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#" method="post" id="loginform" novalidate>
+
+            <div class="input-box">
+                <label for="login-username" class="sr-only">Username</label>
+                <input type="text" required id="login-username" autocomplete="on"
+                       aria-describedby="invalid-login-username">
+                <label>Username</label>
+                <i class="bx bxs-user" aria-hidden="true"></i>
+            </div>
+            <div class="error" id="invalid-login-username" role="alert"></div>
+
+            <div class="input-box">
+                <label for="login-password" class="sr-only">Password</label>
+                <input type="password" required id="login-password"
+                       aria-describedby="invalid-login-password">
+                <label>Password</label>
+                <i class="bx bxs-lock-alt" aria-hidden="true"></i>
+            </div>
+            <div class="error" id="invalid-login-password" role="alert"></div>
+
+            <button class="sbmt-btn" type="submit" id="login-btn">Login</button>
+            <div class="regi-link">
+                <p>Don't have an account? <a href="#" class="SignUpLink">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="info-content login">
+        <h2>WELCOME BACK!</h2>
+        <p>We missed you! Sign in and jump right back into your journey.</p>
+    </div>
+
+    <div class="form-box register">
+        <h2>Register</h2>
+        <form action="#" method="post" id="registerform" novalidate>
+
+            <div class="input-box">
+                <label for="register-email" class="sr-only">Email</label>
+                <input type="email" required id="register-email" autocomplete="email"
+                       aria-describedby="invalid-register-email">
+                <label>Email</label>
+                <i class="bx bx-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="error" id="invalid-register-email" role="alert"></div>
+
+            <div class="input-box">
+                <label for="register-username" class="sr-only">Username</label>
+                <input type="text" required id="register-username" autocomplete="username"
+                       aria-describedby="invalid-register-username">
+                <label>Username</label>
+                <i class="bx bxs-user" aria-hidden="true"></i>
+            </div>
+            <div class="error" id="invalid-register-username" role="alert"></div>
+
+            <div class="input-box">
+                <label for="register-password" class="sr-only">Password</label>
+                <input type="password" required id="register-password" autocomplete="new-password"
+                       aria-describedby="invalid-register-password same-user-pw">
+                <label>Password</label>
+                <i class="bx bxs-lock-alt" aria-hidden="true"></i>
+            </div>
+            <div class="error" id="invalid-register-password" role="alert"></div>
+            <div class="error" id="same-user-pw" role="alert"></div>
+
+            <button class="sbmt-btn" type="submit" id="register-btn">Register</button>
+            <div class="regi-link">
+                <p>Already have an account? <a href="#" class="SignInLink">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="info-content register">
+        <h2>WELCOME!</h2>
+        <p>You’re just one step away from getting started. Let’s create your account.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="login.js"></script>
+<script src="regis.js"></script>
+
+</body>
+</html>
